@@ -12,8 +12,8 @@ def lambda_handler(event, context):
         response = rekognition.detect_faces(
             Image={
                 'S3Object': {
-                    'Bucket': bucket,
-                    'Name': image_key
+                    'Bucket': 'nhchoi-posting',
+                    'Name': '증명사진.png'
                 }
             },
             Attributes=['ALL']
