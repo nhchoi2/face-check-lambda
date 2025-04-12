@@ -58,7 +58,7 @@ def compare_faces():
     response = rekognition.compare_faces(
         SourceImage={'S3Object': {'Bucket': BUCKET_NAME, 'Name': source_key}},
         TargetImage={'S3Object': {'Bucket': BUCKET_NAME, 'Name': target_key}},
-        SimilarityThreshold=0  # 유사도 기준
+        SimilarityThreshold=0  # 유사도 기준 퍼센트를 지정가능
     )
 
     results = []
